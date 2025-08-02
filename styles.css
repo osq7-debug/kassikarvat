@@ -1,88 +1,113 @@
-/* Reset layout and prevent overflow */
+/* Reset & Base */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Base styles for HTML and body */
-html, body {
-  width: 100%;
-  overflow-x: hidden; /* Prevent horizontal scroll */
-  font-family: Arial, sans-serif;
-  background: #f0f0f0;
-  color: #222;
-  padding: 20px;
+body {
+  font-family: 'Rubik', sans-serif;
+  background-color: #121212;
+  color: #f1f1f1;
+  line-height: 1.6;
+}
+
+/* Header & Hero */
+header {
+  background: linear-gradient(to bottom, #1e1e1e, #121212);
+  padding: 60px 20px 40px;
   text-align: center;
 }
 
-/* Container */
-.container {
-  max-width: 600px;
-  margin: 20px auto;
-  background: #fff;
+.hero h1 {
+  font-size: 2.5em;
+  color: #00ffc3;
+}
+
+.subhead {
+  font-size: 1.2em;
+  color: #ccc;
+}
+
+/* Main Content */
+main {
   padding: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.card {
+  background-color: #1f1f1f;
   border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 15px rgba(0, 255, 195, 0.1);
+  transition: transform 0.3s ease;
 }
 
-/* Heading */
-h1 {
-  margin-bottom: 0.3em;
-  color: #333;
-  font-size: 2rem;
+.card:hover {
+  transform: translateY(-5px);
 }
 
-/* Responsive Image */
-img.responsive-img {
-  display: block;
-  margin: 20px auto;
-  width: 250px;          /* Default width */
-  max-width: 90vw;       /* Shrinks on smaller screens */
-  height: auto;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+.card h2 {
+  color: #00ffc3;
+  margin-bottom: 10px;
 }
 
-/* Button */
-button {
-  background-color: #4CAF50;
-  color: white;
-  padding: 12px 24px;
-  font-size: 1rem;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+.card ul {
+  list-style-type: disc;
+  padding-left: 20px;
 }
 
-button:hover {
-  background-color: #45a049;
+.card li {
+  margin-bottom: 8px;
 }
 
-/* Extra text under button */
-#extra-text {
-  margin-top: 15px;
-  font-size: 1.1rem;
-  color: #555;
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #0e0e0e;
+  font-size: 0.9em;
+  color: #888;
 }
 
-/* Responsive tweaks */
+/* Responsive Design */
 @media (max-width: 600px) {
-  h1 {
-    font-size: 1.6rem;
+  .hero h1 {
+    font-size: 2em;
   }
 
-  .container {
+  .card {
     padding: 15px;
   }
+}
 
-  button {
-    padding: 10px 20px;
-    font-size: 0.95rem;
-  }
+/* Animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 0.8s ease-out forwards;
+}
 
-  img.responsive-img {
-    width: 200px;
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: none;
   }
+}
+
+.popup-image {
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 0 12px #00ffc3cc;
+  display: block;
+}
+
+.popup-text {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  color: #00ffc3;
+  font-weight: 600;
+  text-align: center;
 }
