@@ -1,1 +1,67 @@
+/* Reset and base styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background: #f0f0f0;
+  color: #222;
+  text-align: center;
+}
 
+/* Container to center content */
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Heading styling */
+h1 {
+  margin-bottom: 0.3em;
+  color: #333;
+}
+
+/* Responsive, smaller image */
+img.responsive-img {
+  display: block;
+  margin: 20px auto;        /* center + spacing */
+  width: 180px;             /* default fixed width */
+  max-width: 90vw;          /* shrink on small screens */
+  height: auto;             /* keep aspect ratio */
+  border-radius: 8px;       /* rounded corners */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15); /* subtle shadow */
+  transition: width 0.3s ease;
+}
+
+/* Even smaller on very small devices */
+@media (max-width: 400px) {
+  img.responsive-img {
+    width: 140px;
+  }
+}
+
+/* Button styling */
+button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 12px 24px;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Text below button */
+#extra-text {
+  margin-top: 15px;
+  font-size: 1.1rem;
+  color: #555;
+}
