@@ -1,63 +1,3 @@
-/* Basic reset and font */
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 20px;
-  background: #f0f0f0;
-  color: #222;
-  text-align: center;
-}
-
-/* Container */
-.container {
-  max-width: 600px;
-  margin: 0 auto;
-  background: #fff;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-
-/* Heading */
-h1 {
-  margin-bottom: 0.3em;
-  color: #333;
-}
-
-/* Image styling */
-img.responsive-img {
-  display: block;
-  margin: 0 auto 20px auto; /* center + bottom margin */
-  width: 250px;             /* fixed width on desktop */
-  max-width: 80vw;          /* shrink on smaller screens */
-  height: auto;             /* keep aspect ratio */
-  border-radius: 8px;       /* rounded corners */
-  box-shadow: 0 2px 8px rgba(0,0,0,0.2); /* subtle shadow */
-}
-
-/* Button styling */
-button {
-  background-color: #4CAF50;
-  border: none;
-  color: white;
-  padding: 12px 24px;
-  font-size: 1rem;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-button:hover {
-  background-color: #45a049;
-}
-
-/* Text under button */
-#extra-text {
-  margin-top: 15px;
-  font-size: 1.1rem;
-  color: #555;
-}
-
 /* Reset layout and prevent overflow */
 * {
   margin: 0;
@@ -65,15 +5,18 @@ button:hover {
   box-sizing: border-box;
 }
 
+/* Base styles for HTML and body */
 html, body {
   width: 100%;
-  overflow-x: hidden; /* Prevent sideways scroll */
+  overflow-x: hidden; /* Prevent horizontal scroll */
   font-family: Arial, sans-serif;
   background: #f0f0f0;
   color: #222;
+  padding: 20px;
+  text-align: center;
 }
 
-/* Main container */
+/* Container */
 .container {
   max-width: 600px;
   margin: 20px auto;
@@ -81,21 +24,27 @@ html, body {
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  text-align: center;
 }
 
-/* Image style */
+/* Heading */
+h1 {
+  margin-bottom: 0.3em;
+  color: #333;
+  font-size: 2rem;
+}
+
+/* Responsive Image */
 img.responsive-img {
   display: block;
   margin: 20px auto;
-  width: 200px;
-  max-width: 90%;
+  width: 250px;          /* Default width */
+  max-width: 90vw;       /* Shrinks on smaller screens */
   height: auto;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
-/* Button styling */
+/* Button */
 button {
   background-color: #4CAF50;
   color: white;
@@ -111,9 +60,29 @@ button:hover {
   background-color: #45a049;
 }
 
-/* Hidden text */
+/* Extra text under button */
 #extra-text {
   margin-top: 15px;
   font-size: 1.1rem;
   color: #555;
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  .container {
+    padding: 15px;
+  }
+
+  button {
+    padding: 10px 20px;
+    font-size: 0.95rem;
+  }
+
+  img.responsive-img {
+    width: 200px;
+  }
 }
