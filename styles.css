@@ -1,55 +1,47 @@
-/* Reset and base styles */
-body {
-  font-family: Arial, sans-serif;
+/* Reset layout and prevent overflow */
+* {
   margin: 0;
-  padding: 20px;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden; /* Prevent sideways scroll */
+  font-family: Arial, sans-serif;
   background: #f0f0f0;
   color: #222;
+}
+
+/* Main container */
+.container {
+  max-width: 600px;
+  margin: 20px auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
 
-/* Container to center content */
-.container {
-  max-width: 600px;
-  margin: 0 auto;
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-
-/* Heading styling */
-h1 {
-  margin-bottom: 0.3em;
-  color: #333;
-}
-
-/* Responsive, smaller image */
+/* Image style */
 img.responsive-img {
   display: block;
-  margin: 20px auto;        /* center + spacing */
-  width: 180px;             /* default fixed width */
-  max-width: 90vw;          /* shrink on small screens */
-  height: auto;             /* keep aspect ratio */
-  border-radius: 8px;       /* rounded corners */
-  box-shadow: 0 2px 8px rgba(0,0,0,0.15); /* subtle shadow */
-  transition: width 0.3s ease;
-}
-
-/* Even smaller on very small devices */
-@media (max-width: 400px) {
-  img.responsive-img {
-    width: 140px;
-  }
+  margin: 20px auto;
+  width: 200px;
+  max-width: 90%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
 /* Button styling */
 button {
   background-color: #4CAF50;
-  border: none;
   color: white;
   padding: 12px 24px;
   font-size: 1rem;
+  border: none;
   border-radius: 6px;
   cursor: pointer;
   transition: background-color 0.3s ease;
@@ -59,7 +51,7 @@ button:hover {
   background-color: #45a049;
 }
 
-/* Text below button */
+/* Hidden text */
 #extra-text {
   margin-top: 15px;
   font-size: 1.1rem;
